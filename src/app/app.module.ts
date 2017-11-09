@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { SharedModule } from './shared/shared.module';
+import { PageModule } from './page/page.module';
 
 import { AppComponent } from './app.component';
 
 @NgModule({
   imports: [
     BrowserModule,
-    SharedModule
+    PageModule,
   ],
   declarations: [
     AppComponent
