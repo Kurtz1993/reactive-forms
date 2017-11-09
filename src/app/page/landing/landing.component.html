@@ -1,0 +1,33 @@
+<section class="landing container">
+  <h3 class="text-center">This will have multiple forms!</h3>
+
+  <div class="landing__actions">
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="addNewForm()"
+    >
+      Add a new form!
+    </button>
+  </div>
+
+  <pre>{{ form.value | json }}</pre>
+
+  <form
+    novalidate
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+  >
+    <enroll-form
+      [parentForm]="form"
+      (removed)="onRemove($event)"
+    >
+    </enroll-form>
+
+    <input
+      type="submit"
+      value="Submit"
+      class="btn btn-primary"
+    >
+  </form>
+</section>
