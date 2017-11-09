@@ -41,21 +41,6 @@ module.exports = {
     rules: [
       {
         test: /\.ts$/,
-        exclude: path.resolve(cwd, 'node_modules'),
-        enforce: 'pre',
-        use: [
-          {
-            loader: 'tslint-loader',
-            options: {
-              configFile: path.resolve(cwd, 'tslint.json'),
-              tsconfigFile: path.resolve(cwd, 'src', 'tsconfig.json'),
-              failOnHint: true
-            }
-          }
-        ]
-      },
-      {
-        test: /\.ts$/,
         loaders: ['angular2-template-loader', {
           loader: 'awesome-typescript-loader',
           options: { configFileName: path.resolve(cwd, 'src', 'tsconfig.json') }
